@@ -11,97 +11,47 @@
    </style>
   </head>
   <body>
-    Welcome to Interactive Data Visualization Tutorial 1 <Tutorials-1>
-    <h2>Class of 2020</h2>
-    <table>
+   Welcome to Interactive Data Visualization Tutorials
+   <script src="../lib/d3.js"></script>
+   <h1>Class of 2020</h1>
+   <section>
+     <h3>Final Results</h3>
+     <a href="https://www.codecademy.com/learn/learn-d3?g_acctid=243-039-7011&g_keywordid=kwd-79577548073037:loc-190&g_adid=&g_keyword=%2Blearn%20%2Bd3&g_campaign=US+Language%3A+Pro+-+Broad&g_adtype=search&g_network=o&g_adgroupid=1273235086765948&g_campaignid=370314525&utm_id=t_kwd-79577548073037:loc-190:ag_1273235086765948:cp_370314525:n_o:d_c&hsa_acc=2430397011&hsa_cam=10106179091&hsa_grp=1273235086765948&hsa_ad=&hsa_src=o&hsa_tgt=kwd-79577548073037:loc-190&hsa_kw=%2Blearn%20%2Bd3&hsa_mt=p&hsa_net=adwords&hsa_ver=3&msclkid=31fc12f9a32d1f51bc7a4d9a79443ee0&utm_source=bing&utm_medium=cpc&utm_campaign=US%20Language%3A%20Pro%20-%20Broad&utm_term=%2Blearn%20%2Bd3&utm_content=d3">Reference Here</a>
+     <table>
+     <thead>
        <tr>
-          <th>Class</th>
-          <th>Names</th>
-          <th>Grade</th>
-          <th>Ph No</th>
-       </tr>
+         <th colspan="7">Class Results</th>
+         </tr>
        <tr>
-          <td>Statistics</td>
-          <td>Suparna</td>
-          <td>98</td>
-          <td>901-678-9345</td>
-       </tr>
-        <tr bgcolor="#E0F8F7">
-          <td>Data Analysis</td>
-          <td>Jessica</td>
+         <th>Name</th>
+         <th>Python or R</th>
+         <th>Calculus</th>
+         <th>Economics</th>
+         <th>System Analysis</th>
+         <th>D3</th>
+         <th>Total</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td>Suparna</td>
+           <td>89</td>
            <td>100</td>
-          <td>201-675-8907</td>
-       </tr>
-        <tr>
-          <td>Calculus</td>
-          <td>Matthew</td>
-          <td>90</td>
-          <td>234-789-8907</td>
-       </tr>
-        <tr>
-          <td>Systems Analysis</td>
-          <td>Rosalind</td>
-          <td>99</td>
-          <td>201-789-8907</td>
-       </tr>
-        <tr>
-          <td>Computer Graphics</td>
-          <td>Joshua</td>
-          <td>90</td>
-          <td>914-789-8907</td>
-       </tr>
-        <tr>
-          <td>Economics</td>
-          <td>Sophia</td>
-          <td>89</td>
-          <td>914-789-8900</td>
-       </tr>
-        <tr bgcolor="#E0F8F7">
-          <td>Computer Analytics</td>
-          <td>Matt</td>
-          <td>100</td>
-          <td>714-789-8900</td>
-       </tr>
-       <tr>
-          <td>Infographics</td>
-          <td>Anne</td>
-          <td>80</td>
-          <td>709-789-8900</td>
-       </tr>
-       <tr>
-          <td>Data Visualization</td>
-          <td>Eva</td>
-          <td>98</td>
-          <td>549-789-8987</td>
-       </tr>
-        <tr>
-          <td>Business Administration</td>
-          <td>Masha</td>
-          <td>80</td>
-          <td>123-789-8987</td>
-       </tr>
-        <tr>
-          <td>Physics</td>
-          <td>Saad</td>
-          <td>98</td>
-          <td>673-789-6789</td>
-       </tr>
-        <tr>
-          <td>Earth Science</td>
-          <td>Eli</td>
-          <td>90</td>
-          <td>129-789-6789</td>
-       </tr>
-        <tr>
-    <th id="total" colspan="2">Total :</th>
-    <td>1112</td>
-  </tr>
-  <tr>
-    <th id="avg" colspan="2">Avg:</th>
-    <td>92.66</td>
-  </tr>
-    </table>
-    <script src="../lib/d3.js"></script>
-    <script src="main.js"></script>
+           <td>90</td>
+           <td>78</td>
+           <td>90</td>
+           <td>447</td>
+         </tr>
+       </tbody>
+     </table>
+   </section>
+   <hr/>
+   <section>
+     
+     <table id="d3-table"></table>
+   </section>
+
+   <script src="../../lib/d3.js"></script>
+   <script src="main.js"></script>
   </body>
 </html>

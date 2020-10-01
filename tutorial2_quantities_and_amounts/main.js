@@ -13,18 +13,20 @@ d3.csv("../data/Happiness.csv", d3.autoType).then(data => {
     /** SCALES */
     // reference for d3.scales: https://github.com/d3/d3-scale
     const xScale = d3
-      .scaleBand()
-      .domain(data.map(d => d.Country))
-      .range([margin.left, width - margin.right])
-      .paddingInner(paddingInner);
+    .scaleLinear()
+    .domain([0, d3.max(data, d => d.Rank)])
+    .range([margin.left, width]);
   
     const yScale = d3
-      .scaleLinear()
-      .domain([0, d3.max(data, d => d.Rank)])
-      .range([height - margin.bottom, margin.top]);
+    .scaleBand()
+      .domain(data.map(d => d.Country))
+      .range([0,height])
+      .paddingInner(paddingInner);
+
+      
   
     // reference for d3.axis: https://github.com/d3/d3-axis
-    const xAxis = d3.axisBottom(xScale).ticks(data.length);
+    const yAxis = d3.axisLeft(yScale).ticks(data.length);
   
     /** MAIN CODE */
     const svg = d3
@@ -38,10 +40,11 @@ d3.csv("../data/Happiness.csv", d3.autoType).then(data => {
       .selectAll("rect")
       .data(data)
       .join("rect")
-      .attr("y", d => yScale(d.Rank))
-      .attr("x", d => xScale(d.Country))
-      .attr("width", xScale.bandwidth())
-      .attr("height", d => height - margin.bottom - yScale(d.Rank))
+      .attr("y", d => yScale(d.Country))
+      .attr("x",xScale(0))
+      .attr("height", yScale.bandwidth())
+      .attr("width", d =>  xScale(d.Rank))
+      //.attr("transform", `translate(200, ${height - margin.bottom, margin.top})`)
       .attr("fill", "#69b3a2")
       
   
@@ -52,17 +55,18 @@ d3.csv("../data/Happiness.csv", d3.autoType).then(data => {
       .join("text")
       .attr("class", "label")
       // this allows us to position the text in the center of the bar
-      .attr("x", d => xScale(d.Country) + (xScale.bandwidth() / 2))
-      .attr("y", d => yScale(d.Rank))
+      .attr("x",0, d => xScale(d.Rank))
+      .attr("y", d => yScale(d.Country)+(yScale.bandwidth()+15))
       .text(d => d.Rank)
-      .attr("dy", "1.25em");
+      .attr("dx", "220");
   
     svg
       .append("g")
       .attr("class", "axis")
-      .attr("transform", `translate(0, ${height - margin.bottom})`)
-      .call(xAxis);
-
+      .attr("transform", `translate(${margin.left})`)
+      .call(yAxis)
+      .style("text-anchor",left)
+      .text(d.Country)
       
       
-  }); 
+});

@@ -130,7 +130,7 @@ function draw() {
           .attr("opacity", 0.5)
           .attr("fill", d => {
             if (d.country === "US") return "#821D38";
-            else if (d.country === "France") return "pink";
+            else if (d.country === "France") return "burgandy";
             else if (d.country === "Italy") return "green";
             else if (d.country === "Spain") return "yellow";
             else return "white";

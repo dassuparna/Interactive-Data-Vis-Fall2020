@@ -1,0 +1,47 @@
+html{
+  background-image: url("https://floridawineacademy.com/wp-content/uploads/2017/03/WSET-Wine-Image.jpg");
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover; 
+  
+}
+
+
+body {
+    /* ref: https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Source+Sans+Pro */
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 1em 3em;
+  }
+  
+  .dot {
+    cursor: pointer;
+  }
+  h1{
+    font-family: 'Times New Roman', Times, serif;
+     color: #FAFAD2;
+     text-align: center;
+     margin-top: 1cm;
+  }  
+  h1{
+    font-family: 'Times New Roman', Times, serif;
+     color: #FAFAD2;
+     text-align: center;
+     margin-top: 1cm;
+  }  
+  
+  .dot:hover {
+    fill: black;
+  }
+  
+  .axis-label {
+    font-size: 14px;
+    fill: white;
+    text-anchor: middle;
+    text-emphasis-color: white;
+
+  }
+
+  .domain, .tick {
+    stroke:white;
+    fill:white;
+  }

@@ -1,0 +1,53 @@
+
+
+
+body {
+    /* ref: https://fonts.google.com/specimen/Source+Sans+Pro?selection.family=Source+Sans+Pro */
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 1em 3em;
+   background-image: url("https://libraryeuroparl.files.wordpress.com/2016/05/eprs-aag-557005-international-organization-for-migration.jpg");
+  }
+  
+  .dot {
+    cursor: pointer;
+  }
+  h1{
+    font-family: 'Times New Roman', Times, serif;
+     color: black;
+     text-align: center;
+     margin-top: 1cm;
+  }  
+  h2{
+    font-family: 'Times New Roman', Times, serif;
+     color: blueviolet;
+     text-align: center;
+     margin-top: 1cm;
+  }  
+
+  .tooltip {
+    position: absolute;
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 14px;
+    pointer-events: none;
+  }
+  .description p {
+    color: #152238;
+    }
+  
+  .dot:hover {
+    fill: black;
+  }
+  
+  .axis-label {
+    font-size: 14px;
+    fill: red;
+    text-anchor: middle;
+    text-emphasis-color: red;
+
+  }
+
+  .domain, .tick {
+    stroke:red;
+    fill:red;
+  }

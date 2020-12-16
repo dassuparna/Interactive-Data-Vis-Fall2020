@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- this is the title that goes in the browser tab name  -->
+    <title>Interactive Data Visualization Tutorial</title>
+
+    <!-- custom font: https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Temperature Change Around the World</h1>
+      <h2>Global Warming in a Century </h2>
+    </header>
+    <div>
+      <div class="section" id="intro">
+        <p>
+          Global warming is the continuous increase of the global average temperature: specifically, the temperature of the atmosphere and the seas. But that does not mean that all places will get hotter. 
+The increase in global temperature causes changes in weather patterns; that is why some places can experience droughts while others flood, cold places become warmer and, in some cases, hot places become cooler. 
+That is why the term “climate change” is also used to talk about global warming; both terms refer to the same phenomenon. According to Wikipedia:
+“Global warming is a term used to refer to the phenomenon of the increase in the global average temperature, the Earth’s atmosphere and the oceans, which possibly reached the level of warming of the medieval era in the middle of the 20th century, to exceed it to then.”
+
+        </p>
+      </div>
+
+    <label for="countrydropdown">Select a Country</label>
+    <select id="countrydropdown" name="dropdown"></select>
+    <label for="dropdown">Select a Month</label>
+    <select id="dropdown" name="dropdown"></select>
+    <!-- all we need is an element to select -->
+    <div id="d3-container"> </div>
+    
+
+    <!-- this is the line that loads in d3 -->
+    <script src="../lib/d3.js"></script>
+    <!-- this is the line that loads in the main js script -->
+    <script src="./main.js"></script>
+  </body>
+</html>
